@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .section {
+        height: 200px;
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    asdasdsadasdasdasd
+    <br />asdasdsadasdasdasd
+    <br />
+    asdasdsadasdasdasd
+    <br />
+    asdasdsadasdasdasd
+    <br />
+    asdasdsadasdasdasd
+    <br />
+    asdasdsadasdasdasd
+    <br />
+    asdasdsadasdasdasd
+    <br />
+    <section class="section section1"></section>
+    asdasdsadasdasdasd
+    <br />
+    asdasdsadasdasdasd
+    <br />
+    asdasdsadasdasdasd asdasdsadasdasdasd
+    <br />asdasdsadasdasdasd
+    <br />
+    asdasdsadasdasdasd
+    <br />
+    asdasdsadasdasdasd
+    <br />
+    asdasdsadasdasdasd
+    <br />
+    asdasdsadasdasdasd
+    <br />
+    asdasdsadasdasdasd
+    <br />
+
+    asdasdsadasdasdasd
+    <br />
+    asdasdsadasdasdasd
+    <br />
+    asdasdsadasdasdasd asdasdsadasdasdasd
+    <br />asdasdsadasdasdasd
+    <br />
+    asdasdsadasdasdasd
+    <br />
+    asdasdsadasdasdasd
+    <br />
+    asdasdsadasdasdasd
+    <br />
+    asdasdsadasdasdasd
+    <br />
+    asdasdsadasdasdasd
+    <br />
+    <section class="section section2"></section>
+    asdasdsadasdasdasd
+    <br />
+    asdasdsadasdasdasd
+    <br />
+    asdasdsadasdasdasd asdasdsadasdasdasd
+    <br />asdasdsadasdasdasd
+    <br />
+    asdasdsadasdasdasd
+    <br />
+    asdasdsadasdasdasd
+    <br />
+    asdasdsadasdasdasd
+    <br />
+    asdasdsadasdasdasd
+    <br />
+    asdasdsadasdasdasd
+    <br />
+
+    asdasdsadasdasdasd
+    <br />
+    asdasdsadasdasdasd
+    <br />
+    asdasdsadasdasdasd asdasdsadasdasdasd
+    <br />asdasdsadasdasdasd
+    <br />
+    asdasdsadasdasdasd
+    <br />
+    asdasdsadasdasdasd
+    <br />
+    asdasdsadasdasdasd
+    <br />
+    asdasdsadasdasdasd
+    <br />
+    asdasdsadasdasdasd
+    <br />
+
+    asdasdsadasdasdasd
+    <br />
+    asdasdsadasdasdasd
+    <br />
+    asdasdsadasdasdasd
+    <section class="section section3"></section>
+    <br />
+    asdasdsadasdasdasd
+    <br />
+    asdasdsadasdasdasd
+    <br />
+    asdasdsadasdasdasd
+    <br />asdasdsadasdasdasd <br />asdasdsadasdasdasd <br />asdasdsadasdasdasd
+    <br />asdasdsadasdasdasd <br />asdasdsadasdasdasd <br />asdasdsadasdasdasd
+    <br />asdasdsadasdasdasd
+    <br />
+    <br />
+    <section class="section section4"></section>
+
+    asdasdsadasdasdasd
+    <br />
+    asdasdsadasdasdasd
+    <br />
+    asdasdsadasdasdasd
+    <br />asdasdsadasdasdasd <br />asdasdsadasdasdasd <br />asdasdsadasdasdasd
+    <br />asdasdsadasdasdasd <br />asdasdsadasdasdasd <br />asdasdsadasdasdasd
+    <br />asdasdsadasdasdasd
+    <br />
+    <br />
+    asdasdsadasdasdasd
+    <br />
+    asdasdsadasdasdasd
+    <br />
+    asdasdsadasdasdasd
+    <br />asdasdsadasdasdasd <br />asdasdsadasdasdasd <br />asdasdsadasdasdasd
+    <br />asdasdsadasdasdasd <br />asdasdsadasdasdasd <br />asdasdsadasdasdasd
+    <br />asdasdsadasdasdasd
+    <br />
+    <br />
+    <section class="section section5"></section>
+
+    asdasdsadasdasdasd
+    <br />
+    asdasdsadasdasdasd
+    <br />
+    asdasdsadasdasdasd
+    <br />asdasdsadasdasdasd <br />asdasdsadasdasdasd <br />asdasdsadasdasdasd
+    <br />asdasdsadasdasdasd <br />asdasdsadasdasdasd <br />asdasdsadasdasdasd
+    <section class="section section6"></section>
+    <br />asdasdsadasdasdasd
+    <br />
+
+    <section class="section section7"></section>
+    <script>
+      const sections = document.querySelectorAll("section");
+      const options = {
+        root: null,
+      };
+      const handleObserver = (entries, observer) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) {
+            return;
+          }
+          console.log(entry.target);
+          entry.target.classList.toggle("active");
+          observer.unobserve(entry.target)
+          
+        });
+      };
+      const observer = new IntersectionObserver(handleObserver, options);
+      sections.forEach((section) => {
+        observer.observe(section);
+      });
+
+    </script>
+  </body>
+</html>
