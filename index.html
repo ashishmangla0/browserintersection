@@ -1,35 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        Intersection 2 navigation demo
-    </title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intersection 2 navigation demo</title>
     <link
       href="https://fonts.googleapis.com/css?family=Poppins:300,900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <a class="header__logo">
-            ashish mangla
-        </a>
-        <nav class="header__nav">
-            <ul class="header__nav-list">
-                <li class="header__nav-item">
-                        <a class="header__nav-link">
-
-                        </a>
-                </li>
-            </ul>
-        </nav>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a id="skipnav" href="#main-content">Skip to Content</a>
+    <header class="header">
+      <a class="header__logo"> ashish mangla </a>
+      <nav class="header__nav" aria-label="Primary Navigation">
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="#one"> section 1 </a>
+          </li>
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="#two"> section 2 </a>
+          </li>
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="#three"> section 3 </a>
+          </li>
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="#four"> section 4 </a>
+          </li>
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="#five"> section 5 </a>
+          </li>
+        </ul>
+      </nav>
     </header>
-    
-<main>
 
-</main>
-</body>
+   
+
+    <main role="main" id="main-content">
+        <section id="one"></section>
+        <section id="two"></section>
+        <section id="three"></section>
+        <section id="four"></section>
+        <section id="five"></section>
+    </main>
+  </body>
 </html>
