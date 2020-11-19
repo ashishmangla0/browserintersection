@@ -5,12 +5,24 @@ body{
     position: relative;
 }
 
+
+a,
+a:hover,
+a:focus{
+    text-decoration: none;
+}
 .header{
     position: sticky;
-    top:0;
+    top: 0;
     width: 100%;
+    background: #ffffff;
+
 }
 
+.header__nav-link{
+    padding: 15px 15px;
+    display: flex;
+}
 .header__nav-list{
     display: flex;
     justify-content: space-around;
@@ -24,4 +36,42 @@ body{
     max-width: 1140px;
     margin: 0 auto;
     padding: 0 15px;
+}
+
+section{
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+#one{
+    background: green;
+}
+#two{
+    background: orange;
+}
+#three{
+    background: orangered;
+}
+#four{
+    background: greenyellow;
+}
+#five{
+    background: rebeccapurple;
+}
+.header__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#skipnav{
+    background: transparent;
+    color: #000000;
+    left: 0;
+    padding: 1rem 1.5rem;
+    position: absolute;
+    top: -4.2rem;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    z-index: 100;
 }
