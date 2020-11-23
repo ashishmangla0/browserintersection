@@ -19,7 +19,7 @@ const getData = () => {
             //  console.log(data);
             data.items.map((item) => {
                 const detailWrapepr = document.createElement('figure')
-                detailWrapepr.innerHTML = `<img src=${item.img}>`
+                detailWrapepr.innerHTML = `<img src=${item.img}><figcaption>${item.name}</figcaption>`
                 return loadDataHere.append(detailWrapepr);
             })
             // console.log(
