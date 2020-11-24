@@ -26,7 +26,7 @@ window.addEventListener("DOMContentLoaded", (e) => {
     const options = {
         root: null,
         rootMargin: '0px',
-        threshold: 0.05
+        threshold: 0.25
     }
     const handleObserver = (entries, observer) => {
         entries.forEach(entry => {
@@ -42,5 +42,5 @@ window.addEventListener("DOMContentLoaded", (e) => {
     }
     const intersectionObserver = new IntersectionObserver(handleObserver, options);
     intersectionObserver.observe(footerWrap);
-    
+
 })
