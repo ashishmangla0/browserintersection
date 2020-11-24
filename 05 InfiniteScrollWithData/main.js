@@ -42,4 +42,5 @@ window.addEventListener("DOMContentLoaded", (e) => {
     }
     const intersectionObserver = new IntersectionObserver(handleObserver, options);
     intersectionObserver.observe(footerWrap);
+    
 })
