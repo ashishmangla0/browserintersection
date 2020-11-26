@@ -1,77 +1,79 @@
-body{
-    margin:0;
-    scroll-behavior: smooth;
-    font-family: 'Poppins', sans-serif;
-    position: relative;
+body {
+  margin: 0;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+  position: relative;
 }
-
 
 a,
 a:hover,
-a:focus{
-    text-decoration: none;
+a:focus {
+  text-decoration: none;
 }
-.header{
-    position: sticky;
-    top: 0;
-    width: 100%;
-    background: #ffffff;
-
-}
-
-.header__nav-link{
-    padding: 15px 15px;
-    display: flex;
-}
-.header__nav-list{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-    list-style: none;
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: #ffffff;
 }
 
-.container{
-    max-width: 1140px;
-    margin: 0 auto;
-    padding: 0 15px;
+.header__nav-link {
+  padding: 15px 15px;
+  display: flex;
+}
+.header__nav-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
-section{
-    display: flex;
-    min-height: 100vh;
-    justify-content: center;
-    align-items: center;
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
-#one{
-    background: green;
+
+section {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
 }
-#two{
-    background: orange;
+#one {
+  background: green;
 }
-#three{
-    background: orangered;
+#two {
+  background: orange;
 }
-#four{
-    background: greenyellow;
+#three {
+  background: orangered;
 }
-#five{
-    background: rebeccapurple;
+#four {
+  background: greenyellow;
 }
-.header__container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+#five {
+  background: rebeccapurple;
 }
-#skipnav{
-    background: transparent;
-    color: #000000;
-    left: 0;
-    padding: 1rem 1.5rem;
-    position: absolute;
-    top: -4.2rem;
-    -webkit-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-    z-index: 100;
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#skipnav {
+  background: transparent;
+  color: #000000;
+  left: 0;
+  padding: 1rem 1.5rem;
+  position: absolute;
+  top: -4.2rem;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  z-index: 100;
+}
+.header__nav-item .active {
+  background: #a1a1a1;
+  color: #fff;
 }
