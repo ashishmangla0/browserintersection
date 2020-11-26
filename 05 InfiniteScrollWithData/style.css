@@ -32,8 +32,8 @@ body{
     flex-direction: row;
 }
 .section__blog-list article{
-    max-width:25%;
-    flex: 0 0 25%;
+    max-width:33.3333%;
+    flex: 0 0 33.3333%;
     padding: 0 15px;
     margin-bottom: 30px
 }
