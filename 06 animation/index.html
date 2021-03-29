@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="">
+      <div class="container">
+        <h1>this is Dummy Text</h1>
+
+        <div class="row">
+          <div class="col col--img animate" data-animation= "rollIn" data-animduraton='1s' data-delay=".5s">
+            <img src="./image1.png" alt=""   />
+          </div>
+          <div class="col col--img animate" data-animation= "rollIn" data-animduraton='1s' data-delay="1s">
+            <img src="image2.png" alt="" />
+          </div>
+          <div class="col col--img">
+            <img src="image3.png" alt="" class="animate"  data-animation= "fadeInLeft" data-animduraton='1s' data-delay="1.5s"/>
+          </div>
+          <div class="col col--img">
+            <img src="image3.png" alt="" class="animate"  data-animation= "bounceIn" data-animduraton='1s' data-delay="2s"/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col--img">
+            <img src="./image1.png" alt="" class="animate" />
+          </div>
+          <div class="col col--img">
+            <img src="image2.png" alt="" class="animate" />
+          </div>
+          <div class="col col--img">
+            <img src="image3.png" alt="" class="animate" />
+          </div>
+          <div class="col col--img">
+            <img src="image3.png" alt="" class="animate" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col--img">
+            <img src="./image1.png" alt="" class="animate" />
+          </div>
+          <div class="col col--img">
+            <img src="image2.png" alt="" class="animate" />
+          </div>
+          <div class="col col--img">
+            <img src="image3.png" alt="" class="animate" />
+          </div>
+          <div class="col col--img">
+            <img src="image3.png" alt="" class="animate" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col--img">
+            <img src="./image1.png" alt="" class="animate" />
+          </div>
+          <div class="col col--img">
+            <img src="image2.png" alt="" class="animate" />
+          </div>
+          <div class="col col--img">
+            <img src="image3.png" alt="" class="animate" />
+          </div>
+          <div class="col col--img">
+            <img src="image3.png" alt="" class="animate" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col--img">
+            <img src="./image1.png" alt="" class="animate" />
+          </div>
+          <div class="col col--img">
+            <img src="image2.png" alt="" class="animate" />
+          </div>
+          <div class="col col--img">
+            <img src="image3.png" alt="" class="animate" />
+          </div>
+          <div class="col col--img">
+            <img src="image3.png" alt="" class="animate" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const anims = document.querySelectorAll(".animate");
+
+      const options = {};
+      const handleObserver = (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.intersectionRatio > 0) {
+            // entry.target.style.animationDelay = `${entry.target.dataset.delay}`;
+            // entry.target.style.animationName = `${entry.target.dataset.animation}`;
+           
+            entry.target.classList.add(`${entry.target.dataset.animation}`);
+            entry.target.style.animationDuration = `${entry.target.dataset.animduraton}`
+            entry.target.style.animationDelay = `${entry.target.dataset.delay}`
+           
+          } 
+          else {
+            entry.target.classList.remove(`${entry.target.dataset.animation}`);
+            //entry.target.style.animation = "none";
+            entry.target.style.animationDuration = 'unset'
+            entry.target.style.animationDelay = `unset`
+          }
+        });
+      };
+
+      const intersectionObserver = new IntersectionObserver(
+        handleObserver,
+        options
+      );
+      anims.forEach((anim) => {
+        intersectionObserver.observe(anim);
+       
+      });
+    </script>
+  </body>
+</html>
